@@ -1,0 +1,94 @@
+
+body{
+    background: #fffcfa;
+    margin: 0;
+}
+.wrapper {
+    width: 960px;
+    margin: 4em auto 0 auto;
+}
+.left {
+    height: 628px;
+    width: 460px;
+    float: left;
+    text-align: right;
+}
+.left h1 {
+    color: #332d1c;
+    font-size: 4em;
+    font-weight: lighter;
+    margin: 0.1em 0 0.2em 0;
+}
+.left .subtitle , .left h2{
+    color: #625e56;
+    width: 70%;
+    float: right;
+    font-weight: lighter;
+    line-height: 1.5em;
+}
+#footer {
+    clear: both;
+    border-top: 1px solid #ddd;
+}
+#footer #mc_embed_signup {
+    background:transparent;
+    width: 300px;
+    float: right;
+    padding-top: 0;
+}
+#footer #mc_embed_signup form {
+    padding-top: 0;
+}
+#footer #mc_embed_signup form h2 {
+    font-weight: lighter;
+    margin-top: 0;
+}
+#footer #mc_embed_signup #mce-success-response {
+    font-weight: lighter;
+    width: 100%;
+    margin: 0 0 1em 0;
+}
+#footer #mc_embed_signup .button {
+    background: url(../img/button-bg.png) top left repeat-x #c22d00;
+}
+.right {
+    width: 460px;
+    float: right;
+}
+
+.right .phone {
+    position: relative;
+    height: 628px;
+}
+.phone-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 382px;
+    height: 728px;
+
+}
+.phone-background img {
+    max-width: 100%;
+}
+
+
+
+.screenshots {
+    position: absolute;
+    top: 70px;
+    left: 43px;
+    width: 219px;
+    background: #222;
+    height: 336px;
+    overflow: hidden;
+}
+.screenshots .carousel {
+    width: 1000px;
+    position: absolute;
+}
+.screenshots .carousel img {
+    width: 219px;
+    float: left;
+
+}
