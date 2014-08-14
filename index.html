@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shopping list</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <!-- Localization -->
+    <link rel="resource" type="application/l10n" href="locales/locales.ini" />
+    <script type="application/javascript" src="assets/js/lib/l10n.js"></script>
+    <link rel="stylesheet" href="assets/css/app.css">
+</head>
+<body>
+
+
+        <section id="index" data-position="current" class="current">
+
+            <section data-type="sidebar">
+                <header>
+                    <menu type="toolbar">
+                        <a href="#" data-l10n-id="drawer-done">Done</a>
+                    </menu>
+                    <h1 data-l10n-id="settings">Settings</h1>
+                </header>
+                <nav id="settings">
+
+                    <ul>
+                        <li>
+                            <label class="pack-switch">
+                                <input type="checkbox" checked id="clear-shake">
+                                <span></span>
+                            </label>
+                            <a href="#" data-l10n-id="clear-shake">Clear on shake</a>
+
+                        </li>
+                        <li>
+                            <a class="new-list" data-l10n-id="create-new-list">Create new list</a>
+                        </li>
+
+                    </ul>
+                </nav>
+            </section>
+
+            <section id="drawer" role="region">
+
+                <header class="fixed">
+                    <a href="#"><span class="icon icon-menu" data-l10n-id="hide-sidebar">hide sidebar</span></a>
+                    <a href="#drawer"><span class="icon icon-menu" data-l10n-id="show-sidebar">show sidebar</span></a>
+                    <h1 class="list-name"></h1>
+                    <menu type="toolbar">
+                        <a href="#" id="delete-list" class="hidden icon action-icon delete"></a>
+                        <a href="#" id="add-item-to-list" class="hidden icon action-icon new"></a>
+
+                    </menu>
+                </header>
+
+
+
+                <article class="content">
+
+                    <section id="shopping-list">
+                        <ul>
+                            <li class="scrollable header">
+                                <p class="center" data-l10n-id="no-list-yet">You don't have any list yet</p>
+                                <p class="center"><a href="#" class="new-list" data-l10n-id="create-one">Create one</a></p>
+                            </li>
+                        </ul>
+
+                    </section>
+                </article>
+
+                <ul class="pager">
+
+                </ul>
+
+            </section> <!-- end drawer -->
+        </section> <!-- end index -->
+
+        <section id="add-item" data-position="back" role="region">
+            <header class="fixed">
+                <h1 class="list-name"></h1>
+                <menu type="toolbar">
+                    <a href="#" id="return-to-list" class="icon action-icon cancel"></a>
+                </menu>
+            </header>
+            <article class="content header">
+                <form id="add-item-form">
+                    <!--<input type="number" id="item-count" value="1" placeholder="Count" />-->
+                    <input type="text" id="item-name" placeholder="Item" />
+                    <button type="submit" class="recommend" data-l10n-id="save">Save</button>
+                </form>
+                <section id="items-list">
+                    <ul id="autocomplete">
+
+                    </ul>
+                </section>
+            </article>
+        </section>
+
+        <section id="add-list" data-position="back" role="region">
+            <header class="fixed">
+                <h1 class="" data-l10n-id="create-list">Create List</h1>
+                <menu type="toolbar">
+                    <a href="#" id="return-to-lists" class="icon action-icon cancel"></a>
+                </menu>
+            </header>
+            <article class="content header">
+                <form id="add-list-form">
+                    <input type="text" id="list-name" placeholder="Name" />
+                    <button type="submit" class="recommend" data-l10n-id="save">Save</button>
+                </form>
+            </article>
+        </section>
+
+
+    <script type="text/javascript" src="assets/js/lib/shake.js"></script>
+    <script type="text/javascript"
+            data-main="assets/js/init.js"
+            src="assets/js/lib/require.js"></script>
+
+</body>
+</html>

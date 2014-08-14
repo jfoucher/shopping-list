@@ -1,0 +1,330 @@
+@import "gaia/fonts.css";
+@import "gaia/transitions.css";
+@import "gaia/util.css";
+@import "gaia/buttons.css";
+@import "gaia/headers.css";
+@import "gaia/switches.css";
+@import "gaia/drawer.css";
+@import "gaia/confirm.css";
+@import "gaia/input_areas.css";
+@import "gaia/action_icons.css";
+@import "headers.css";
+@import "buttons.css";
+
+@keyframes rotation {
+    0% {transform: rotate(0deg);}
+    100%   {transform: rotate(359deg);}
+}
+body {
+    width: 100%;
+    overflow: hidden;
+    font-weight: lighter;
+}
+
+#index {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+
+section[role="region"] > header:first-child menu[type="toolbar"] a.icon {
+    width: 4rem !important;
+    padding: 0;
+    margin: 0;
+    left: -1rem;
+}
+
+section[role="region"] > header:first-child menu[type="toolbar"] a.icon.action-icon:before {
+    left: 1rem !important;
+    width: 3rem !important;
+}
+
+#add-list, #add-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    background: #fff;
+    z-index: -1;
+    transition: opacity 0.5s;
+}
+#add-list.fade-in, #add-item.fade-in {
+    z-index: 100;
+    opacity:1;
+    transition: opacity 0.5s;
+
+
+}
+#add-list.fade, #add-item.fade {
+    z-index: 100;
+    opacity:0;
+    transition: opacity 0.5s;
+}
+
+.center {
+    text-align: center;
+}
+#shopping-list p {
+    font-weight: lighter;
+    color: #ccc;
+}
+#shopping-list p:first-child{
+    margin-top: 12rem;
+}
+#shopping-list {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+#shopping-list > ul.lists{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+#shopping-list > ul.lists > li {
+    padding: 0;
+    margin:0;
+    float:left;
+    height: 100%;
+}
+
+
+
+.turquoise{
+    background: #1abc9c;
+    color: #fff;
+}
+.green-sea { background: #16a085; color: #fff;}
+
+.emerald { background: #2ecc71;  color: #fff;}
+.nephritis { background: #27ae60;  color: #fff;}
+
+.peter-river { background: #3498db;  color: #fff;}
+.belize-hole { background: #2980b9;  color: #fff;}
+
+.amethyst { background: #9b59b6;  color: #fff;}
+.wisteria { background: #8e44ad;  color: #fff;}
+
+.wet-asphalt { background: #34495e;  color: #fff;}
+.midnight-blue { background: #2c3e50;  color: #fff;}
+
+.sun-flower { background: #f1c40f;  color: #fff;}
+.orange { background: #f39c12;  color: #fff;}
+
+.carrot { background: #e67e22;  color: #fff;}
+.pumpkin { background: #d35400;  color: #fff;}
+
+.alizarin { background: #e74c3c;  color: #fff;}
+.pomegranate { background: #c0392b;  color: #fff;}
+
+.clouds { background: #ecf0f1;  color: #7f8c8d;}
+.silver { background: #bdc3c7;  color: #fff;}
+
+.concrete { background: #95a5a6;  color: #fff;}
+.asbestos { background: #7f8c8d;  color: #fff;}
+
+.list-items {
+    padding: 0 0 2rem 0;
+}
+.list-items li {
+    border-bottom: 1px solid rgba(255,255,255, 0.5);
+
+}
+.list-items li a {
+    display: block;
+    width: calc(100% - 4rem);
+    font-weight: lighter;
+    color: #fff;
+    text-decoration: none;
+    outline: none;
+    padding: 0 2rem;
+    line-height: 2.2em;
+}
+
+.list-items li.removed {
+    background: rgba(255,255,255, 0.3);
+}
+
+.list-items li.removed a {
+    text-decoration: line-through;
+    -moz-text-decoration-color: #c00;
+    color: #ecf0f1;
+}
+.clouds .list-items li a {
+
+    color: #7f8c8d;
+
+}
+
+.clouds .list-items li.removed a {
+    text-decoration: line-through;
+    -moz-text-decoration-color: #c00;
+    color: #95a5a6;
+}
+
+#item-count {
+    width: 18%;
+    margin-right: 2%;
+    float: left;
+}
+#item-name {
+    width: 80%;
+    float: left;
+}
+
+#list-name {
+    width: 80%;
+    float: left;
+}
+
+#add-item-form button, #add-list-form button {
+    width: 18%;
+    float: right;
+}
+
+ul.pager {
+    position: fixed;
+    bottom: 0;
+    height: 2rem;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.5);
+    text-align: center;
+}
+
+ul.pager li {
+    margin: 0.2rem;
+    width: 0;
+    height: 0;
+    display: inline-block;
+    border: 0.5rem solid rgba(255,255,255, 0.3);
+    border-radius: 50%;
+
+}
+ul.pager li.active {
+    border: 0.5rem solid rgba(255,255,255, 0.9);
+}
+
+#items-list {
+    position: absolute;
+    bottom: 0rem;
+    top: 15rem;
+    left: 0;
+    right: 0;
+    overflow: scroll;
+}
+
+#autocomplete {
+    width: 100%;
+    overflow: scroll;
+}
+#autocomplete li {
+    width: 100%;
+    padding: 0;
+    height: auto;
+    border-bottom: 1px solid rgba(0,0,0, 0.1);
+
+}
+
+#autocomplete li.go-left {
+    -webkit-transition: transform 0.6s;-moz-transition: transform 0.6s;-ms-transition: transform 0.6s;-o-transition: transform 0.6s;transition: transform 0.6s;
+    transform: translate3d(-100%, 0, 0);
+}
+
+#autocomplete li a {
+    display: block;
+    width: calc(100% - 4rem);
+    font-weight: lighter;
+    color: #999;
+    text-decoration: none;
+    outline: none;
+    padding: 0 2rem;
+    line-height: 2.2em;
+
+}
+
+article.content a.new-list {
+    color: #ccc;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+article.content.header form {
+    margin-top: 2rem;
+}
+
+#drawer header h1.list-name {
+    max-width: 18rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display:block;
+    float: left;
+}
+
+#settings .pack-switch {
+    float: right;
+    margin: 0 2.5rem 0 0;
+    height: 4.2rem;
+}
+#settings input[type="text"],
+#settings input[type="password"],
+#settings input[type="email"],
+#settings input[type="tel"],
+#settings input[type="search"],
+#settings input[type="url"],
+#settings input[type="number"],
+#settings textarea {
+
+    font-size: 1.2rem;
+    line-height: 3rem;
+
+
+}
+
+#settings fieldset.error{
+    outline: 0.1rem solid #900;
+}
+
+#settings fieldset legend {
+    font-size: 1.2rem;
+    line-height: 3rem;
+}
+
+
+#settings fieldset section input[type="text"],
+#settings fieldset section input[type="password"],
+#settings fieldset section input[type="email"],
+#settings fieldset section input[type="tel"],
+#settings fieldset section input[type="search"],
+#settings fieldset section input[type="number"],
+#settings fieldset section textarea {
+    height: 3rem;
+}
+
+#drawer .content {
+    height: 100%;
+    position: relative;
+    width: 100%;
+    margin:0;
+    padding: 0;
+    overflow: hidden;
+}
+
+
+section[role="region"] > header:first-child menu[type="toolbar"] .share ul li a{
+    color: rgb(0, 78, 90) !important;
+    margin: 0;
+    padding: 0 3rem !important;
+    height: auto;
+    display: block;
+    width: 100%;
+    line-height: 4rem;
+}
+
+

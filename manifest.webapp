@@ -1,0 +1,41 @@
+{
+  "version": "0.1.5",
+  "name": "Shopping List",
+  "description": "Create as many lists as you want. Easily add recurring items to lists with the autocomplete feature",
+  "launch_path": "/index.html",
+  "icons": {
+    "16": "/assets/img/icons/shopping-16.png",
+    "32": "/assets/img/icons/shopping-32.png",
+    "48": "/assets/img/icons/shopping-48.png",
+    "60": "/assets/img/icons/shopping-60.png",
+    "90": "/assets/img/icons/shopping-90.png",
+    "120": "/assets/img/icons/shopping-120.png",
+    "128": "/assets/img/icons/shopping-128.png",
+    "256": "/assets/img/icons/shopping-256.png"
+
+  },
+
+  "developer": {
+    "name": "Jonathan Foucher",
+    "url": "http://jfoucher.com"
+  },
+  "installs_allowed_from": ["*"],
+  "locales": {
+    "es": {
+      "description": "Lista de la compra",
+      "developer": {
+        "name": "Jonathan Foucher",
+        "url": "http://jfoucher.com"
+      }
+    },
+    "fr": {
+      "description": "Listes de courses",
+      "developer": {
+        "name": "Jonathan Foucher",
+        "url": "http://jfoucher.com"
+      }
+    }
+  },
+  "default_locale": "en"
+
+}
