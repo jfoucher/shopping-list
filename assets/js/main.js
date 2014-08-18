@@ -54,32 +54,6 @@ function mce_preload_check(){
 function mce_init_form(){
     jQuery(document).ready( function($) {
 
-        //INIT screenshot carousel
-        var left = 0;
-        var carousel = setInterval(function(){
-            $('.screenshots .carousel').animate({'left': left});
-
-            left = left - 219;
-            if(left <= -219*4) {
-                left = 0;
-            }
-        }, 5000);
-
-        $('.phone').hover(function(){
-            clearInterval(carousel);
-            carousel = null;
-        }, function(){
-            var left = 0;
-            carousel = setInterval(function(){
-                $('.screenshots .carousel').animate({'left': left});
-
-                left = left - 219;
-                if(left <= -219*4) {
-                    left = 0;
-                }
-            }, 5000);
-        });
-
         var options = { errorClass: 'mce_inline_error', errorElement: 'div', onkeyup: function(){}, onfocusout:function(){}, onblur:function(){}  };
         var mce_validator = $("#mc-embedded-subscribe-form").validate(options);
         $("#mc-embedded-subscribe-form").unbind('submit');//remove the validator so we can get into beforeSubmit on the ajaxform, which then calls the validator
