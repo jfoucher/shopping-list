@@ -2,6 +2,7 @@
 body{
     background: #fffcfa;
     margin: 0;
+    font-family: sans-serif;
 }
 .wrapper {
     width: 960px;
