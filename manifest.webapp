@@ -34,6 +34,13 @@
         "name": "Jonathan Foucher",
         "url": "http://jfoucher.com"
       }
+    },
+    "fr": {
+      "description": "Λίστα για ψώνια",
+      "developer": {
+        "name": "Jonathan Foucher",
+        "url": "http://jfoucher.com"
+      }
     }
   },
   "default_locale": "en"
